@@ -58,7 +58,7 @@ body {
   border-radius: 0.5rem;
   color: var(--_color);
   background: var(--_shadowMain);
-  box-shadow: color-mix(in srgb, var(--_shadowMain) 70%, transparent) 0px 4px 2px, #000 0px 8px 5px;
+  box-shadow: color-mix(in srgb, var(--_shadowMain) 70%, transparent) 0px 7px 2px, #000 0px 8px 5px;
   font-weight: 400;
   opacity: 0.8;
   transition: opacity 0.15s cubic-bezier(0.895, 0.03, 0.685, 0.22), font-weight 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
@@ -70,7 +70,7 @@ body {
   font-weight: 700;
 }
 .button:active {
-  box-shadow: var(--_shadowMain) 0px 3px 2px, #000 0px 3px 5px;
+  box-shadow: color-mix(in srgb, var(--_shadowMain) 70%, transparent) 0px 4px 0px, #000 0px 3px 5px;
 }
 .button--cancel {
   --shadowMain: var(--buttonFnClear);
