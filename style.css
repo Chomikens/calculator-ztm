@@ -1,0 +1,89 @@
+:root {
+  --buttonFnClear:#e74c3c;
+  --buttonEqual:#66bfbf;
+  --buttonFn:#405671;
+  --buttonNum:#e3e3e3;
+  --textColor100:#fff;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+button {
+  all: unset;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  user-select: none;
+  cursor: pointer;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #e8e8e8;
+  color: #36395a;
+}
+
+.container {
+  position: relative;
+  width: min(100% - 2rem, 60rem);
+  margin-inline: auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.button {
+  --_color: var(--color, black);
+  --_shadowMain: var(--shadowMain, black);
+  max-width: 50px;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 0.5rem;
+  color: var(--_color);
+  background: var(--_shadowMain);
+  box-shadow: color-mix(in srgb, var(--_shadowMain) 70%, transparent) 0px 4px 2px, #000 0px 8px 5px;
+  font-weight: 700;
+  opacity: 0.8;
+  transition: opacity 0.15s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+.button:hover {
+  opacity: 1;
+}
+.button:focus-within {
+  scale: 1.1;
+}
+.button:active {
+  box-shadow: var(--_shadowMain) 0px 3px 2px, #000 0px 3px 5px;
+}
+.button--cancel {
+  --shadowMain: var(--buttonFnClear);
+}
+.button--equal {
+  --shadowMain: var(--buttonEqual);
+}
+.button--functional {
+  --shadowMain: var(--buttonFn);
+  --color:var(--textColor100);
+}
+.button--num {
+  --shadowMain: var(--buttonNum);
+}
+
+/*# sourceMappingURL=style.css.map */

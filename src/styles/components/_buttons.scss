@@ -1,0 +1,51 @@
+@use "../abstracts/" as *;
+@use "sass:color";
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.button {
+  --_color: var(--color, black);
+  --_shadowMain: var(--shadowMain, black);
+
+  max-width: 50px;
+  width: 100%;
+  aspect-ratio: 1;
+
+  border-radius: 0.5rem;
+  color: var(--_color);
+  background: var(--_shadowMain);
+  box-shadow: color-mix(in srgb, var(--_shadowMain) 70%, transparent) 0px 4px 2px, #000 0px 8px 5px;
+  font-weight: 700;
+
+  opacity: 0.8;
+  transition: opacity 0.15s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+  &:hover {
+    opacity: 1;
+  }
+  &:focus-within {
+    scale: 1.1;;        
+  }
+
+  &:active  {
+    box-shadow: var(--_shadowMain) 0px 3px 2px, #000 0px 3px 5px;
+
+  }
+
+  &--cancel {
+    --shadowMain: var(--buttonFnClear);
+  }
+  &--equal {
+    --shadowMain: var(--buttonEqual);
+  }
+  &--functional {
+    --shadowMain: var(--buttonFn);
+    --color:var(--textColor100);
+  }
+  &--num {
+    --shadowMain: var(--buttonNum);
+  }
+}
