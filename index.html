@@ -1,17 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Calculator | Kotorożec</title>
-</head>
-<body>
-    <div class="button-container">
-    <button class="button button--cancel">C</button>
-    <button class="button button--equal">=</button>
-    <button class="button button--functional">X</button>
-    <button class="button button--num">4</button>
-</div>
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <link rel="shortcut icon" href="./src/img/favico/favicon-32x32.png" type="image/x-icon">
+      <meta name="description" content="This is my calc!">
+      <title>Calculator | Kotorożec</title>
+   </head>
+   <body>
+      <main>
+         <section class="button_section">
+            <div class="container">
+                <!-- Calculator -->
+               <div class="calculator" aria-labelledby="calculator-title">
+                <!-- Calculator Display Screen -->
+                  <header class="calculator__displayScreen">
+                     <p role="status" aria-live="polite"></p>
+                  </header>
+                  <!-- Buttons -->
+                  <div class="calculator__buttonContainer" role="group" aria-labelledby="calculator-buttons">
+                    <!-- Functional buttons -->
+                    <button class="button button--functional" value="+" aria-label="Add" aria-keyshortcuts="+">+</button>
+                    <button class="button button--functional" value="-" aria-label="Subtract" aria-keyshortcuts="-">-</button>
+                    <button class="button button--functional" value="*" aria-label="Multiply" aria-keyshortcuts="*">×</button>
+                    <button class="button button--functional" value="/" aria-label="Divide" aria-keyshortcuts="/">÷</button>
+                    <!-- Numbers -->
+                    <button class="button button--num" value="7" aria-label="Number 7" aria-keyshortcuts="7">7</button>
+                    <button class="button button--num" value="8" aria-label="Number 8" aria-keyshortcuts="8">8</button>
+                    <button class="button button--num" value="9" aria-label="Number 9" aria-keyshortcuts="9">9</button>
+                    <button class="button button--num" value="4" aria-label="Number 4" aria-keyshortcuts="4">4</button>
+                    <button class="button button--num" value="5" aria-label="Number 5" aria-keyshortcuts="5">5</button>
+                    <button class="button button--num" value="6" aria-label="Number 6" aria-keyshortcuts="6">6</button>
+                    <button class="button button--num" value="1" aria-label="Number 1" aria-keyshortcuts="1">1</button>
+                    <button class="button button--num" value="2" aria-label="Number 2" aria-keyshortcuts="2">2</button>
+                    <button class="button button--num" value="3" aria-label="Number 3" aria-keyshortcuts="3">3</button>
+                    <!-- Decimal -->
+                    <button class="button button--functional" value="." aria-label="Decimal" aria-keyshortcuts=".">.</button>
+                    <button class="button button--num" value="0" aria-label="Number 0" aria-keyshortcuts="0">0</button>
+                    <!-- Functional: Reset -->
+                    <button class="button button--cancel" value="" aria-label="Clear" aria-keyshortcuts="c">C</button>
+                    <!-- Functional: Equal -->
+                    <button class="button button--equal" value="=" aria-label="Equal" aria-keyshortcuts="Enter">=</button>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+   </body>
 </html>
