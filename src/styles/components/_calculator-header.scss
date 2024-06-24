@@ -1,0 +1,22 @@
+@use "../abstracts/" as *;
+
+.calculator__displayScreen {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 5rem;
+    padding-inline-end:1.5rem ;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: clrMap(caclulatorscreen);
+
+    p {
+        font-size:clamp(1.5rem, 2vw + 1rem, 3rem);
+        color:clrMap( background-clr);
+        overflow-x: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #d4aa70 clrMap(caclulatorscreen);
+        scrollbar-gutter: stable;
+    }
+}
+
