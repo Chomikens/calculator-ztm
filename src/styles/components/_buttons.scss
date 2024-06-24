@@ -5,8 +5,6 @@
 .button {
   --_color: var(--color, black);
   --_shadowMain: var(--shadowMain, black);
-
-  max-width: 50px;
   width: 100%;
   aspect-ratio: 1;
 
@@ -33,9 +31,16 @@
 
   &--cancel {
     --shadowMain: var(--buttonFnClear);
+    grid-column: 3 / span 2;
+    aspect-ratio: 2/1;
+
+
   }
   &--equal {
     --shadowMain: var(--buttonEqual);
+    height:100%;
+    grid-column: 4;
+    grid-row: 2 /span 3;
   }
   &--functional {
     --shadowMain: var(--buttonFn);

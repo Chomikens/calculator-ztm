@@ -43,16 +43,9 @@ body {
   margin-inline: auto;
 }
 
-.button-container {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
 .button {
   --_color: var(--color, black);
   --_shadowMain: var(--shadowMain, black);
-  max-width: 50px;
   width: 100%;
   aspect-ratio: 1;
   border-radius: 0.5rem;
@@ -74,9 +67,14 @@ body {
 }
 .button--cancel {
   --shadowMain: var(--buttonFnClear);
+  grid-column: 3/span 2;
+  aspect-ratio: 2/1;
 }
 .button--equal {
   --shadowMain: var(--buttonEqual);
+  height: 100%;
+  grid-column: 4;
+  grid-row: 2/span 3;
 }
 .button--functional {
   --shadowMain: var(--buttonFn);
@@ -84,6 +82,43 @@ body {
 }
 .button--num {
   --shadowMain: var(--buttonNum);
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  width: 100%;
+  margin-inline: auto;
+  border-radius: 1.3rem;
+  background-color: #fff;
+  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+}
+
+.calculator__displayScreen {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 7rem;
+  padding-inline-end: 1.5rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #233142;
+}
+.calculator__displayScreen p {
+  font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
+  color: #e8e8e8;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #d4aa70 #233142;
+  scrollbar-gutter: stable;
+}
+
+.calculator__buttonContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

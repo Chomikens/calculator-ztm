@@ -1,12 +1,12 @@
 @use "../abstracts/" as *;
 
 .calculator {
-    display: flex;
-    flex-direction: column;
-    min-width: 400px;
-    max-width: 600px;
-    margin-inline: auto;
-    border-radius: 1.3rem;
-    background-color: clrMap(neutral-400);
-    box-shadow: 0 5px 30px -5px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  width: 100%;
+  margin-inline: auto;
+  border-radius: 1.3rem;
+  background-color: clrMap(neutral-400);
+  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
 }
