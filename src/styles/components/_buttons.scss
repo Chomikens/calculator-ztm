@@ -1,11 +1,7 @@
 @use "../abstracts/" as *;
 @use "sass:color";
 
-.button-container {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
+
 .button {
   --_color: var(--color, black);
   --_shadowMain: var(--shadowMain, black);
