@@ -47,7 +47,6 @@ body {
   --_color: var(--color, black);
   --_shadowMain: var(--shadowMain, black);
   width: 100%;
-  aspect-ratio: 1;
   border-radius: 0.5rem;
   color: var(--_color);
   background: var(--_shadowMain);
@@ -68,7 +67,6 @@ body {
 .button--cancel {
   --shadowMain: var(--buttonFnClear);
   grid-column: 3/span 2;
-  aspect-ratio: 2/1;
 }
 .button--equal {
   --shadowMain: var(--buttonEqual);
@@ -117,6 +115,7 @@ body {
 .calculator__buttonContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(75px, 1fr);
   gap: 20px;
   padding: 10px;
 }

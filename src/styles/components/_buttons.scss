@@ -6,9 +6,7 @@
   --_color: var(--color, black);
   --_shadowMain: var(--shadowMain, black);
   width: 100%;
-  aspect-ratio: 1;
-
-  border-radius: 0.5rem;
+   border-radius: 0.5rem;
   color: var(--_color);
   background: var(--_shadowMain);
   box-shadow: color-mix(in srgb, var(--_shadowMain) 70%, transparent) 0px 7px 2px, #000 0px 8px 5px;
@@ -32,8 +30,6 @@
   &--cancel {
     --shadowMain: var(--buttonFnClear);
     grid-column: 3 / span 2;
-    aspect-ratio: 2/1;
-
 
   }
   &--equal {
