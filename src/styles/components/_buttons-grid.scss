@@ -1,8 +1,7 @@
 .calculator__buttonContainer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: minmax(75px, 1fr);
-    gap: 20px;
-    padding:10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(75px, 1fr);
+  gap: 20px;
+  padding: 10px 15px 20px;
 }
-
